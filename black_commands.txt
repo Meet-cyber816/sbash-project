@@ -1,0 +1,15 @@
+iptables
+python3
+netstat
+ulimit
+chattr
+watch
+shred
+wget
+sudo
+curl
+yes
+tee
+ssh
+nc
+dd
