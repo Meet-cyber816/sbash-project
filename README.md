@@ -12,3 +12,14 @@ sudo apt install libreadline-dev
 gcc sbash.c -o sbash -lreadline
 gcc sbash_input.c -o sbash_input
 ```
+# Setup sbash on the system
+## Run the following command
+```
+chmod +x setup.sh && sudo ./setup.sh
+```
+## Now open close the Terminal and reopen it now you have sbash properly setted up
+# Uninstall sbash
+## Run following command
+```
+cd ~/.sbash && ./uninstall
+```
