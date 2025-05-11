@@ -13,3 +13,5 @@ tee
 ssh
 nc
 dd
+chown
+passwd
