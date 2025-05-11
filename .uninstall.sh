@@ -34,7 +34,7 @@ check_status() {
     fi
 }
 
-print_status "Starting Secure Terminal (sbash) uninstallation..."
+print_status "Starting sbash uninstallation..."
 
 # Get actual username
 USER_HOME=$(eval echo ~$(logname))
@@ -42,6 +42,9 @@ SBASH_DIR="$USER_HOME/.sbash"
 LOCAL_BIN="/usr/local/bin"
 
 sudo chattr -i $USER_HOME/.bashrc
+sudo chattr -i $USER_HOME/.bash_logout
+sudo chattr -i $USER_HOME/.profile
+sudo chattr -i $USER_HOME/.bash_profile
 
 # Remove sbash from /etc/shells
 print_status "Removing sbash from system shells..."
@@ -60,8 +63,8 @@ fi
 
 # Remove sbash configuration from .bashrc
 print_status "Removing sbash configuration from .bashrc..."
-if grep -q "# Secure Terminal Configuration" "$USER_HOME/.bashrc"; then
-    sed -i '/# Secure Terminal Configuration/,/exec \/usr\/local\/bin\/sbash/d' "$USER_HOME/.bashrc"
+if grep -q "# Sbash Configuration" "$USER_HOME/.bashrc"; then
+    sed -i '/# Sbash Configuration/,/exec \/usr\/local\/bin\/sbash/d' "$USER_HOME/.bashrc"
     check_status "Removed sbash configuration from .bashrc" "Failed to remove sbash configuration from .bashrc"
 fi
 
@@ -72,6 +75,6 @@ if [ -d "$SBASH_DIR" ]; then
     check_status "Removed .sbash directory" "Failed to remove .sbash directory"
 fi
 
-print_success "Secure Terminal (sbash) uninstallation completed successfully!"
+print_success "Sbash uninstallation completed successfully!"
 print_status "Please restart your terminal."
 exit 0 

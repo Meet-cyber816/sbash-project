@@ -53,18 +53,7 @@ get_package_manager() {
 # Detect package manager
 PACKAGE_MANAGER=$(get_package_manager)
 
-print_status "Starting Secure Terminal (sbash) installation..."
-
-# Install dependencies
-print_status "Installing required dependencies..."
-if [ "$PACKAGE_MANAGER" = "apt-get" ]; then
-    sudo apt-get install -y dbus-x11 || { print_error "Failed to install dbus-x11"; exit 1; }
-    sudo apt-get install -y gnome-settings-daemon || { print_error "Failed to install gnome-settings-daemon"; exit 1; }
-elif [ "$PACKAGE_MANAGER" = "yum" ] || [ "$PACKAGE_MANAGER" = "dnf" ]; then
-    sudo $PACKAGE_MANAGER install -y dbus-x11 gnome-settings-daemon || { print_error "Failed to install dependencies"; exit 1; }
-elif [ "$PACKAGE_MANAGER" = "pacman" ]; then
-    sudo pacman -S --noconfirm dbus-x11 gnome-settings-daemon || { print_error "Failed to install dependencies"; exit 1; }
-fi
+print_status "Starting sbash installation..."
 
 # Check if gcc is installed
 if ! command -v gcc &> /dev/null; then
@@ -101,7 +90,6 @@ if [ ! -f sbash ]; then
     exit 1
 fi
 
-
 # If black_commands.txt exists, run sbash_input
 if [ -f black_commands.txt ]; then
     print_status "Configuring restricted commands..."
@@ -118,6 +106,12 @@ check_status "sbash installed to $LOCAL_BIN" "Failed to install sbash"
 sudo chmod +x "$LOCAL_BIN/sbash"
 check_status "Set execute permissions" "Failed to set execute permissions"
 
+# Creating man file for use of safer man
+sudo touch "$LOCAL_BIN/man"
+sudo bash -c "echo '#!/bin/bash
+LESSSECURE=1 LESS=\"-is\" /usr/bin/man \"\$@\"' > \"$LOCAL_BIN/man\""
+sudo chmod +x "$LOCAL_BIN/man"
+
 # Add sbash to /etc/shells
 print_status "Configuring system shells..."
 if ! grep -q "$LOCAL_BIN/sbash" /etc/shells; then
@@ -127,7 +121,7 @@ fi
 
 # Add exec command to .bashrc
 print_status "Configuring .bashrc..."
-echo -e "\n# Secure Terminal Configuration" >> "$USER_HOME/.bashrc"
+echo -e "\n# Sbash Configuration" >> "$USER_HOME/.bashrc"
 echo "exec /usr/local/bin/sbash" >> "$USER_HOME/.bashrc"
 check_status ".bashrc configured" "Failed to configure .bashrc"
 
@@ -151,9 +145,12 @@ print_status "Cleaning up..."
 rm -f uninstall.c
 
 sudo chattr +i $USER_HOME/.bashrc
+sudo chattr +i $USER_HOME/.bash_logout
+sudo chattr +i $USER_HOME/.profile
+sudo chattr +i $USER_HOME/.bash_profile
 
-print_success "Secure Terminal (sbash) installation completed successfully!"
-print_status "To uninstall, go to ~/.sbash and run './uninstall' command from Secure terminal."
-print_status "Please restart your terminal to open Secure Terminal."
+print_success "Sbash installation completed successfully!"
+print_status "To uninstall, go to ~/.sbash and run './uninstall' command from Terminal."
+print_status "Please restart your terminal to run sbash."
 exit 0
 

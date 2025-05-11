@@ -152,10 +152,10 @@ int main(int argc, char *argv[])
 	char temp_command[250];
 	char black_command[25];
 	char danger_flags[][35]={"/bin/bash","/bin/sh","bin/bash","bin/sh","bash","sh","shell","-rf","-a","-al","-la","-f","--no-preserve-root","-R","alias","--norc","/dev/null","-exec","--overwrite"};
-        char danger_dir[][35]={".bashrc",".bash_profile",".ssh",".config",".bash_logout",".vimrc",".virc"};
+    char danger_dir[][35]={".bashrc",".bash_profile",".ssh",".config",".bash_logout",".vimrc",".virc"};
 	char *command;
 	char *dir;
-        char *token;
+    char *token;
 	FILE *fp;
 
 	// Configure readline for proper line wrapping
