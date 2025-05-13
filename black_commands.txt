@@ -8,8 +8,6 @@ shred
 wget
 sudo
 curl
-yes
-tee
 ssh
 nc
 dd
