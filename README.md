@@ -1,8 +1,8 @@
-# Sbash - Secure Bash Shell
-
-![Sbash](https://sbash-security-software.onrender.com/assets/img/logo.png)
+# Sbash - Secure Bash Shell (Standard Edition)
 
 Sbash (Secure Bash Shell) is a system-level security software designed as a more secure alternative to the standard Bash shell for organizations, enterprises, and educational institutions seeking to secure their systems.
+
+**This repository contains the source code for Sbash Standard Edition, which is available as open source software.**
 
 ## Overview
 
@@ -15,6 +15,7 @@ Sbash enhances Linux security by integrating directly with the Bash shell, provi
 - **Special Character Filtering**: Prevents the use of special characters that could be used for malicious purposes
 - **Low Resource Usage**: Minimal impact on system performance
 - **Easy Integration**: Works with existing Linux systems and security infrastructure
+- **Open Source**: Free to use, modify, and distribute under open source terms
 
 ### Protection Against
 
@@ -64,13 +65,14 @@ cd ~/.sbash && ./uninstall
 
 ## Editions
 
-### Standard Edition
+### Standard Edition (This Repository)
 
-Perfect for individual users or home environments. The Standard Edition provides comprehensive security with a user-friendly interface.
+This repository contains the open source Standard Edition of Sbash, which is perfect for individual users or home environments. The Standard Edition provides comprehensive security with a user-friendly interface.
 
 - Single-user operation
 - Complete command protection
 - Easy to install and configure
+- Free and open source
 
 ### Admin-Controlled Edition
 
@@ -117,6 +119,14 @@ Meet Panchal
 Contact: tedomanoffsec@gmail.com  
 LinkedIn: https://www.linkedin.com/in/meet-panchal-434709316/
 
+## Contributing
+
+As an open source project, contributions to Sbash are welcome! Feel free to fork this repository, make improvements, and submit pull requests.
+
+## License
+
+This project is released as open source software. You are free to use, modify, and distribute this software according to the terms of the license.
+
 ---
 
-For more information, visit [Sbash Security Software](https://sbash-security-software.onrender.com/)
+For more information, visit [the website](https://sbash-security-software.onrender.com/)
