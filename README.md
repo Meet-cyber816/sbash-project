@@ -50,7 +50,9 @@ gcc sbash_input.c -o sbash_input
 ### Setup Sbash on the System
 
 ```
-chmod +x setup.sh && sudo ./setup.sh
+chmod +x setup.sh
+sudo ./setup.sh
+
 ```
 
 After installation, close and reopen your terminal to start using Sbash.
