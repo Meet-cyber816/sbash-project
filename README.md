@@ -92,27 +92,6 @@ Sbash works by:
 4. Preventing access to sensitive system directories
 5. Providing a secure environment for normal daily operations
 
-## Restricted Commands
-
-By default, Sbash restricts the following commands for security reasons:
-- iptables
-- python3
-- netstat
-- ulimit
-- chattr
-- watch
-- shred
-- wget
-- sudo
-- curl
-- ssh
-- nc (netcat)
-- dd
-- chown
-- passwd
-
-Additional commands can be added to the restricted list using the sbash_input utility.
-
 ## Project Creator
 
 Meet Panchal  
@@ -122,10 +101,6 @@ LinkedIn: https://www.linkedin.com/in/meet-panchal-434709316/
 ## Contributing
 
 As an open source project, contributions to Sbash are welcome! Feel free to fork this repository, make improvements, and submit pull requests.
-
-## License
-
-This project is released as open source software. You are free to use, modify, and distribute this software according to the terms of the license.
 
 ---
 
