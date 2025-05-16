@@ -50,8 +50,7 @@ gcc sbash_input.c -o sbash_input
 ### Setup Sbash on the System
 
 ```
-chmod +x setup.sh
-sudo ./setup.sh
+chmod +x setup.sh && sudo ./setup.sh
 ```
 
 After installation, close and reopen your terminal to start using Sbash.
@@ -61,7 +60,8 @@ After installation, close and reopen your terminal to start using Sbash.
 If you need to uninstall Sbash, run:
 
 ```
-cd ~/.sbash && ./uninstall
+cd ~/.sbash 
+./uninstall
 ```
 
 ## Editions
@@ -92,6 +92,7 @@ Sbash works by:
 3. Checking for dangerous special characters and flags
 4. Preventing access to sensitive system directories
 5. Providing a secure environment for normal daily operations
+
 
 ## Project Creator
 
