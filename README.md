@@ -107,6 +107,4 @@ As an open source project, contributions to Sbash are welcome! Feel free to fork
 
 This project is released as open source software. You are free to use, modify, and distribute this software according to the terms of the license.
 
----
 
-For more information, visit [the website](https://sbash-security-software.onrender.com/)
