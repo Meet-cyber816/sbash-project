@@ -97,7 +97,7 @@ Sbash works by:
 
 Meet Panchal  
 Contact: tedomanoffsec@gmail.com  
-LinkedIn: https://www.linkedin.com/in/meet-panchal-434709316/
+LinkedIn: https://www.linkedin.com/in/meeet-panchal
 
 ## Contributing
 
