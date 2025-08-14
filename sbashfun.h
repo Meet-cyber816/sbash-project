@@ -18,7 +18,7 @@ void print_sbash_info() {
   printf(
       "Usage: Use sbash as a regular shell, but restricted commands are "
       "blocked for security.\n");
-  printf("LinkedIn: https://www.linkedin.com/in/meet-panchal-434709316/\n");
+  printf("Github: https://github.com/Meet-cyber816/sbash-project\n");
   printf("Contact: tedomanoffsec@gmail.com\n");
 }
 

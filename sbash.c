@@ -1,14 +1,15 @@
 /* This is the source code of sbash shell "sbash.c" */
 
-#include "sbashfun.h"
-#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <readline/history.h>
 #include <readline/readline.h>
 #include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
+#include <limits.h>
+
+#include "sbashfun.h"
 
 #define MAX_PATH 256
 
