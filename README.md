@@ -23,16 +23,16 @@ https://youtu.be/DgHcm1yww8E?si=itSsFbXp1MBdWb5U
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Key Features](#key-features)
-- [Protection Against](#protection-against)
-- [Installation](#installation)
-- [Uninstalling Sbash](#uninstalling-sbash)
-- [Editions](#editions)
-- [How Sbash Works](#how-sbash-works)
-- [Project Creator](#project-creator)
-- [Contributing](#contributing)
-- [License](#license)
+- [Overview](#-overview)
+- [Key Features](#-key-Features)
+- [Protection Against](#-protection-against
+- [Installation](#-installation)
+- [Uninstalling Sbash](#-uninstalling-sbash)
+- [Editions](#-editions)
+- [How Sbash Works](#-how-sbash-works)
+- [Project Creator](#-project-creator)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🔍 Overview
 
