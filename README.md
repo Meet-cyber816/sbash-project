@@ -1,4 +1,4 @@
-<h1 align="center">Sbash - Secure Bash Shell (Standard Edition)</h1>
+<h1 align="center">Sbash - Secure Bash Shell</h1>
 <div align="center">
 
 <img src="https://img.shields.io/badge/Security-Enhanced-brightgreen?style=for-the-badge" alt="Security Enhanced">
