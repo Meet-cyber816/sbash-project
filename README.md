@@ -25,7 +25,7 @@ https://youtu.be/DgHcm1yww8E?si=itSsFbXp1MBdWb5U
 
 - [Overview](#-overview)
 - [Key Features](#-key-Features)
-- [Protection Against](#-protection-against
+- [Protection Against](#-protection-against)
 - [Installation](#-installation)
 - [Uninstalling Sbash](#-uninstalling-sbash)
 - [Editions](#-editions)
