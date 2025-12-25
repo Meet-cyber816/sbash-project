@@ -109,12 +109,14 @@ int main (int argc, char *argv[])
       if (strcmp (command, "sbashinfo") == 0)
         {
           print_sbash_info ();
+          free(command);
           continue;
         }
 
       if (strstr (command, ".sh"))
         {
           printf ("sbash: \033[0;31mPermission denied!\033[0m\n");
+          free(command);
           continue;
         }
 
@@ -125,13 +127,19 @@ int main (int argc, char *argv[])
         }
 
       if (dir_check (command, danger_dir))
-        continue;
-
+        {
+          free(command);
+          continue;
+        }
+      
       strncpy (temp_command, command, sizeof (temp_command) - 1);
       temp_command[sizeof (temp_command) - 1] = '\0';
 
       if (editor_check (command))
-        continue;
+        {
+          free(command);
+          continue;
+        }  
 
       dir = strtok (temp_command, " ");
       if (strcmp (dir, "cd") == 0)
